@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 希尔排序
+ * 按照增量把数组分割成几个部分，分别进行插入排序
  */
 public class Shell_Sort {
 

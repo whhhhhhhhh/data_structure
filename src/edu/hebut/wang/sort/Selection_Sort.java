@@ -1,5 +1,7 @@
 package edu.hebut.wang.sort;
 
+import java.util.Arrays;
+
 /**
  * 直接选择排序
  */
@@ -7,7 +9,7 @@ public class Selection_Sort{
 
     public static void main(String[] args) {
         int[] A = {4,7,2,1,5,6,3};
-        float a = 3.14F;
+        System.out.println(Arrays.toString(sort(A)));
     }
 
     public static int[] sort(int[] A) {
