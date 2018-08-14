@@ -1,6 +1,7 @@
 package edu.hebut.wang.sort;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 /**
  * 希尔排序
