@@ -27,7 +27,7 @@ public class Bubble_Sort {
         Random random = new Random();
         int[] array = new int[size];
         for (int i = 0; i < size; i++){
-            array[i] = random.nextInt(10000) + 1;
+            array[i] = random.nextInt(size) + 1;
         }
         return array;
     }

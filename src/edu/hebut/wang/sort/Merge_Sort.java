@@ -8,29 +8,27 @@ import java.util.Arrays;
 public class Merge_Sort {
 
     public static void main(String[] args) {
-        int[] arr = {10,9,8,7,6,5,4,3,2,1};
-        sort(arr,0,arr.length-1);
+        int[] arr = Bubble_Sort.createRandomArray(100000);
+        sort(arr,0,arr.length-1,new int[arr.length]);
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void sort(int[] A, int start, int end) {
+    public static void sort(int[] A, int start, int end, int[] tmp) {
         if (start < end) {
             int mid = (start + end)/2;
-            sort(A,start,mid);
-            sort(A,mid + 1, end);
-            merge(A,start,mid,end);
+            sort(A,start,mid, tmp);
+            sort(A,mid + 1, end, tmp);
+            merge(A,start,mid,end, tmp);
         }
     }
 
-    public static void merge(int[] A, int start, int mid, int end) {
+    public static void merge(int[] A, int start, int mid, int end, int[] tmp) {
         //第一个有序子序列起始位置
         int i = start;
         //第二个有序子序列起始位置
         int j = mid + 1;
         //临时数组起始位置
         int k = 0;
-        //生成临时数组
-        int[] tmp = new int[A.length];
 
         while (i <= mid && j <= end) {
             if (A[i] < A[j]) {
