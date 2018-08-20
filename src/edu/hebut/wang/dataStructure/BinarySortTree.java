@@ -1,6 +1,10 @@
 package edu.hebut.wang.dataStructure;
 
-public class BinaryTree {
+/**
+ * 二叉排序树
+ * 左子树都小于根节点，右子树都大于根节点
+ */
+public class BinarySortTree {
 
     //根节点
     private Node root;
@@ -16,7 +20,7 @@ public class BinaryTree {
         //右子结点
         private Node rightChild;
 
-        Node(long data) {
+        Node(int data) {
             this.data = data;
         }
     }
@@ -26,7 +30,7 @@ public class BinaryTree {
      *
      * @param data
      */
-    public void insert(long data) {
+    public void insert(int data) {
         Node newNode = new Node(data);
         Node currNode = root;
         Node parentNode;
@@ -123,8 +127,7 @@ public class BinaryTree {
      * 删除结点 分为3种情况
      * 1.叶子结点
      * 2.该节点有一个子节点
-     * 3.该节点有二个子节点
-     * 找到中序遍历的后继节点替换删除的节点
+     * 3.该节点有二个子节点， 找到中序遍历的后继节点替换删除的节点
      * @param data
      */
     public boolean delete(long data) throws Exception {

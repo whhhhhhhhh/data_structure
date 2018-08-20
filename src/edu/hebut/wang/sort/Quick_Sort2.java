@@ -39,6 +39,8 @@ public class Quick_Sort2 {
      * @return 枢轴的位置
      */
     public static int partSort(int A[], int left, int right) {
+        int mid = getMid(A,left,right);
+        swap(A,left,mid);
         int key = A[left];
         while (left < right) {
             while (left < right && A[right] >= key) {
@@ -53,5 +55,37 @@ public class Quick_Sort2 {
         A[left] = key;
         return left;
     }
+
+    public static int getMid(int[] A,int left,int right)
+    {
+        int mid = (left + right)/2;
+        if(A[left] <= A[right])
+        {
+            if(A[mid] <  A[left])
+                return left;
+            else if(A[mid] > A[right])
+                return right;
+            else
+                return mid;
+        }
+        else
+        {
+            if(A[mid] < A[right])
+                return right;
+            else if(A[mid] > A[left])
+                return left;
+            else
+                return mid;
+        }
+    }
+
+    public static int[] swap(int[] A, int left, int right) {
+        int tmp;
+        tmp = A[left];
+        A[left] = A[right];
+        A[right] = tmp;
+        return A;
+    }
+
 
 }
