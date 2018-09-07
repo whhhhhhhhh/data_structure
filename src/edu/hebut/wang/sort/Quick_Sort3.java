@@ -1,7 +1,7 @@
 package edu.hebut.wang.sort;
 
 
-import edu.hebut.wang.dataStructure.Stack;
+import edu.hebut.wang.datastructure.Stack;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package edu.hebut.wang.dataStructure;
+package edu.hebut.wang.datastructure;
 
 import java.util.LinkedList;
 

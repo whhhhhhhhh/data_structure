@@ -1,4 +1,4 @@
-package edu.hebut.wang.dataStructure;
+package edu.hebut.wang.datastructure;
 
 /**
  * 模拟单项链表
