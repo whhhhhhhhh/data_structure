@@ -1,4 +1,4 @@
-package edu.hebut.wang.datastructure;
+package edu.hebut.wang.datastructure.graph;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -33,6 +33,10 @@ public class Digraph {
         }
     }
 
+    public int getVertexsNum() {
+        return vertexsNum;
+    }
+
     //用于测试，返回一个顶点的邻接点
     public Iterable<Integer> adj(int vertex) {
         Set<Integer> set = new HashSet<>();
@@ -53,7 +57,7 @@ public class Digraph {
                 {2,1},
         };
         Digraph wd = new Digraph(data,4);
-        for(int i :wd.adj(1)) {
+        for(int i :wd.adj(3)) {
             System.out.println(i);
         }
     }

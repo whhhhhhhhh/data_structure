@@ -1,8 +1,11 @@
-package edu.hebut.wang.datastructure;
+package edu.hebut.wang.datastructure.graph;
 
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 有向图的邻接表
+ */
 public class AdjListDigraph {
 
     private class EdgeNode {
